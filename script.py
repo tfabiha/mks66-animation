@@ -181,10 +181,10 @@ def run(filename):
                 arg_1 = args[1]
                 arg_2 = args[2]
 
-                if command["knob"]:
-                    arg_0 *= symbols[ command["knob"] ] #frames[frm][ command["knob"] ]
-                    arg_1 *= symbols[ command["knob"] ] #frames[frm][ command["knob"] ]
-                    arg_2 *= symbols[ command["knob"] ] #frames[frm][ command["knob"] ]
+                if command["knob"] in symbols:
+                    arg_0 *= float(symbols[ command["knob"] ]) #frames[frm][ command["knob"] ]
+                    arg_1 *= float(symbols[ command["knob"] ]) #frames[frm][ command["knob"] ]
+                    arg_2 *= float(symbols[ command["knob"] ]) #frames[frm][ command["knob"] ]
 
                 print("\nmove variables: {}, {}, {}\n".format(arg_0, arg_1, arg_2))
                     
@@ -244,3 +244,4 @@ def run(filename):
                 save_extension(screen, args[0])
             save_extension(screen, "anim/" + name + "%03d"%frm)
             # end operation loop
+    #make_animation(name)

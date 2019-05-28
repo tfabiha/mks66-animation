@@ -1,0 +1,75 @@
+frames 10
+
+constants shiny_purple 0.3 0.2 0.8 0.3 0 0 0.3 0.2 0.8
+constants shiny_teal 0.2125 0.714 0.393548 0.1275 0.4284 0.2719 0.054 0.1814 0.166712
+constants dull_yellow 0.4 0.2 0.8 0.6941176 0.2 0.8 0.8862745 0.2 0.8
+
+
+push
+	move 80 150 0
+	rotate x 30
+	rotate y -20
+	rotate y 360 hort
+	box shiny_teal 0 0 0 300 20 160
+
+	push
+		move 0 200 0
+		box shiny_teal 0 0 0 20 200 20
+	pop
+
+	push
+		move 280 200 0
+		box shiny_teal 0 0 0 20 200 20
+	pop	
+
+	push
+		move 0 200 -140
+		box shiny_teal 0 0 0 20 200 20
+		move 280 0 0
+		box shiny_teal 0 0 0 20 200 20
+	pop
+
+	push
+		move 0 220 0
+		box shiny_teal 0 0 0 300 20 160
+	pop
+
+	push
+		move 150 60 -80
+		sphere dull_yellow 0 0 0 20 
+		line 0 0 0 0 140 80
+		line 0 0 0 0 140 -80
+
+		push
+			move -40 0 0
+			sphere dull_yellow 0 0 0 20
+			line 0 0 0 0 140 80
+			line 0 0 0 0 140 -80
+
+			move -40 0 0
+			sphere dull_yellow 0 0 0 20
+			line 0 0 0 0 140 80
+			line 0 0 0 0 140 -80
+		pop			
+
+		push		
+				move 40 0 0
+				sphere dull_yellow 0 0 0 20
+				line 0 0 0 0 140 80
+				line 0 0 0 0 140 -80
+				
+				move 40 0 0
+				sphere dull_yellow 0 0 0 20
+				line 0 0 0 0 140 80
+				line 0 0 0 0 140 -80
+
+
+//rotate z 20
+//sphere 0 -140 0 20
+//line 0 0 80 0 -140 0
+//line 0 0 -80 0 -140 0
+
+vary hort 0 9 0 1
+
+//display
+//save ugly.png
